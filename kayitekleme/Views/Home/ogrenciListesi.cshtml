@@ -1,0 +1,45 @@
+﻿@model List<kayitekleme.Models.ogrenci>
+
+    @{
+        Layout = null;
+    }
+
+    <!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>ogrenciListesi</title>
+        <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="jumbotron">
+                <h1 class="text-center">ÖĞRENCİ LİSTESİ</h1>
+            </div>
+            <div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>AD</th>
+                            <th>SOYAD</th>
+                            <th>DERS ADI</th>
+                            <th>NOTU</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var ogrenci in Model)
+                        {   
+                        <tr>
+                            <td>@ogrenci.ad</td>
+                            <td>@ogrenci.soyad</td>
+                            <td>@ogrenci.ders</td>
+                            <td>@ogrenci.not</td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

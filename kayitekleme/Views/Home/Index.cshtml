@@ -1,0 +1,56 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    @using (Html.BeginForm("OgrenciKaydet", "Home", FormMethod.Post, new { @class="form-horizantal", role="form" }))
+    {
+    <div>
+        <div class="container">
+
+            <div class="jumbotron">
+                <h1 class="text-center">ÖĞRENCİ KAYIT SAYFASI</h1>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-offset-3 col-sm-2 control-label">ADI</label>
+                <div class="col-sm-4">
+                    <input placeholder="ADI" name="ad" class="form-control" type="text" />
+                </div>
+            </div>
+          
+            <div class="form-group row">
+                <label class="col-sm-offset-3 col-sm-2 control-label">SOYADI</label>
+                <div class="col-sm-4">
+                    <input placeholder="SOYADI" name="soyad" class="form-control" type="text" />
+                </div>
+            </div>
+            
+            <div class="form-group row">
+                <label class="col-sm-offset-3 col-sm-2 control-label">DERS ADI</label>
+                <div class="col-sm-4">
+                    <input placeholder="DERS ADI" name="ders" class="form-control" type="text" />
+                </div>
+            </div>
+            
+            <div class="form-group row">
+                <label class="col-sm-offset-3 col-sm-2 control-label">NOTU</label>
+                <div class="col-sm-4">
+                    <input placeholder="NOTU" name="not" class="form-control" type="text" />
+                </div>
+            </div>
+            <br /> <br />
+            <button type="submit" value="ekle" class=" col-sm-offset-3 col-xs-6 btn btn-danger">EKLE</button>
+        </div>
+    </div>
+    }
+</body>
+</html>
